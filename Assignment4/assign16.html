@@ -1,0 +1,54 @@
+<html>
+
+<head>
+    <title>Assignment 16</title>
+    <script>
+        var v;
+
+        function f() {
+            document.getElementById("image6").style =
+                "position:absolute; left: 500; top: 400;";
+            setTimeout(f2, 1000);
+            setTimeout(f3, 2000);
+            setTimeout(f4, 3000);
+
+            function f2() {
+                document.getElementById("image6").style =
+                    "position:absolute; left: 625; top: 300;";
+            }
+            function f3() {
+                document.getElementById("image6").style =
+                    "position:absolute; left: 750; top: 400;";
+            }
+            function f4() {
+                document.getElementById("image6").style =
+                    "position:absolute; left: 625; top: 500;";
+            }
+        }
+
+        function clear1() {
+            clearInterval(v);
+        }
+    </script>
+</head>
+
+<body>
+    <div id="img1">
+        <img src="blackball.gif" class="images" onmouseover="clear1()" onmouseout="v=setInterval(f,4000)" id="image1"
+            height="50" style="position: absolute; left: 500; top: 400" />
+        <img src="blackball.gif" class="images" id="image3" height="50"
+            style="position: absolute; left: 750; top: 400" />
+        <img src="blackball.gif" class="images" id="image5" height="50"
+            style="position: absolute; left: 625; top: 400" />
+        <img src="blackball.gif" class="images" id="image2" height="50"
+            style="position: absolute; left: 625; top: 300" />
+        <img src="blackball.gif" class="images" id="image4" height="50"
+            style="position: absolute; left: 625; top: 500" />
+        <img src="orange.jfif" id="image6" height="50" style="position: absolute; left: 625; top: 400" />
+    </div>
+    <input type="button" onClick="v=setInterval(f,4000)" onClick="f()" value="Start" />
+
+    <div id="msg"></div>
+</body>
+
+</html>

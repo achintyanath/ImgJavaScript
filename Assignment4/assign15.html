@@ -1,0 +1,82 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Assugnment 14</title>
+    <script>
+        
+        var num=0;
+        function change(){
+           if(num<4&&num>=0){
+               num++;
+           }
+            
+            if(num==1){
+           document.getElementById("image").src="https://1000logos.net/wp-content/uploads/2017/06/Logo-Samsung.png";
+           document.getElementById("backbutton").style.display="inline";
+            }
+            else if(num==2){
+             document.getElementById("image").src="https://1000logos.net/wp-content/uploads/2018/08/Xiaomi-Logo.png";
+             document.getElementById("backbutton").style.display="inline";
+            }
+           else if(num==3){
+           document.getElementById("image").src="https://cdn.freelogovectors.net/wp-content/uploads/2020/03/oneplus-logo.png";
+           document.getElementById("backbutton").style.display="inline";
+            }
+            else if(num==4){
+           document.getElementById("image").src="https://upload.wikimedia.org/wikipedia/commons/b/bc/Realme-realme-_logo_box-RGB-01.png";
+           document.getElementById("fontbutton").style.display="none";
+            }
+        }
+        function change2(){
+            
+            if(num<=4&&num>=0){
+               num--;
+           }
+            if(num==0){
+           document.getElementById("image").src="https://1000logos.net/wp-content/uploads/2016/10/Apple-Logo.png";
+           document.getElementById("fontbutton").style.display="inline";
+            }
+            else if(num==1){
+           document.getElementById("image").src="https://1000logos.net/wp-content/uploads/2017/06/Logo-Samsung.png";
+           document.getElementById("fontbutton").style.display="inline";
+            }
+           else  if(num==2){
+             document.getElementById("image").src="https://1000logos.net/wp-content/uploads/2018/08/Xiaomi-Logo.png";
+             document.getElementById("fontbutton").style.display="inline";
+            }
+            else if(num==3){
+           document.getElementById("image").src="https://cdn.freelogovectors.net/wp-content/uploads/2020/03/oneplus-logo.png";
+           document.getElementById("fontbutton").style.display="inline";
+            }
+           
+        }
+  </script>
+</head>
+<body>
+    <p>
+        Click two times to change the image!!!
+    </p>
+
+
+    <div>
+        <img src="https://1000logos.net/wp-content/uploads/2016/10/Apple-Logo.png" id ="image" height="300">   
+     </div>
+     <div>
+        <button id="backbutton" style="display:none">
+            <img src="https://cdn4.iconfinder.com/data/icons/navigation-40/24/chevron-left-128.png" id="back" onclick="change2()" style="height:20px">
+        </button>
+         <button id="fontbutton">
+             <img src="https://cdn4.iconfinder.com/data/icons/navigation-40/24/chevron-right-128.png" id="next" onclick="change()" style="height:20px">
+         </button>
+        
+
+     </div>
+    
+
+   
+</body>
+</html>

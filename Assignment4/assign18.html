@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script>
+        var w1;
+        var w2;
+        var w3;
+        var w4;
+        var w5;
+        var w6;
+
+        function openwindow() {
+            var height = window.screen.availHeight;
+            var width =  window.screen.availWidth;
+            w1=window.open("http://www.google.com","","height=300,width=300","left=0,top=0");
+            w2=window.open("http://www.apple.com","","height=300,width=300,left="+width+",top=0");
+            w3=window.open("http://www.quora.com","","height=300,width=300,left="+width+",top="+height+"");
+            w4=window.open("https://w3schools.com/default.asp","","height=300,width=300,left=0,top="+height+"");
+            w5=window.open("http://www.yahoo.com","","height=300,width=300,left="+((width/2)-150)+",top="+((height/2)-150)+"");
+            w6=window.open("https://twitter.com","","height=300,width=300,left="+(width*Math.random())+",top="+(height*Math.random())+"");
+        }
+           function closewindow()
+            {
+                w6.close();
+                w1.close();
+                w2.close();
+                w3.close();
+                w4.close();
+                w5.close();
+                
+                window.close();
+               
+            }
+           
+        
+            
+           
+        </script>
+</head>
+<body>
+    <div>
+    <img src="https://1000logos.net/wp-content/uploads/2016/10/Apple-Logo.png" height="300" onclick="openwindow()">
+    </div>
+    <div>
+    <button onclick="closewindow()">close</button>
+    </div>
+    
+</body>
+</html>
