@@ -4,7 +4,7 @@ let inp = email.value;
 var inp2 = password.value;
 const button = document.getElementById("mybutton");
 
-//button.addEventListener('click', fetch);
+button.addEventListener('click', fetch);
 
 
 email.addEventListener("focus", () => {
