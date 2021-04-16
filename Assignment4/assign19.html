@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Assignment19</title>
+</head>
+<body>
+    <script>
+
+       function gettingnumber (changenumber) {
+       var endstring = document.cookie.indexOf (";", changenumber);
+        if (endstring == -1)
+        endstring = document.cookie.length;
+        return decodeURI(document.cookie.substring(changenumber, endstring));
+        }
+        function getcookie (name) {
+        var argument1 = name + "=";
+        var length1 = argument1.length;
+        var cookielen = document.cookie.length;
+        var i = 0;
+        while (i < cookielen) {
+        var j = i + length1;
+        if (document.cookie.substring(i, j) == argument1)
+        return gettingnumber (j);
+        i = document.cookie.indexOf(" ", i) + 1;
+        if (i == 0) 
+        break; 
+        }
+        return null;
+        }
+        function setcookie (name, value) {
+        var argtypes = setcookie.arguments;
+            console.log(argtypes[2])
+        var arglength = setcookie.arguments.length;
+        var expires =argtypes[2];
+        document.cookie = name + "=" +encodeURI(value) +
+        ((expires == null) ? "" : ("; expires=" + expires.toGMTString()));
+        }
+
+
+        function alertmessage() {
+        var expirydate = new Date();
+        var visit;
+        expirydate.setTime(expirydate.getTime() +  (60* 1000 )); 
+        if(!(visit = getcookie("visit"))) 
+        visit = 0;
+        visit++;
+        setcookie("visit", visit, expirydate);
+        alert("Your browser has visited this page "+visit+ " times" );
+        }
+
+        window.onload=alertmessage
+        </script>
+        
+        
+        
+</body>
+</html>
