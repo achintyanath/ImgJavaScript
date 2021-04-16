@@ -43,7 +43,7 @@
         function alertmessage() {
         var expirydate = new Date();
         var visit;
-        expirydate.setTime(expirydate.getTime() +  (60* 1000 )); 
+        expirydate.setTime(expirydate.getTime() +  (24*60*60* 1000 )); 
         if(!(visit = getcookie("visit"))) 
         visit = 0;
         visit++;
