@@ -1,5 +1,7 @@
-let button = document.getElementById("button");
-button.addEventListener('click', fetch);
+/*let button = document.getElementById("button");
+button.addEventListener('click', fetch);*/
+
+window.onload = fetch();
 
 function fetch(){
     console.log("CLICKED");
