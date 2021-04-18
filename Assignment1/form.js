@@ -7,7 +7,13 @@ const email = document.getElementById("email");
 const password = document.getElementById("password");
 const confirmpass = document.getElementById("confirmpass");
 const button = document.getElementById("button");
-var flag =false;
+var flag1 =false;
+var flag2 =false;
+var flag3 =false;
+var flag4 =false;
+var flag5 =false;
+var flag6 =false;
+var flag7 =false;
 var num=0;
 name.addEventListener('focus',()=>{
     document.getElementById("errormessage").style.display="none"
@@ -22,12 +28,14 @@ name.addEventListener('blur',()=>{
     if(reg.test(inp)){
         console.log("Matched");
         num++;
-        flag=true;
+        flag1=true;
+        return flag1;
     }
     else{
         console.log("Not Matched");
         document.getElementById("errormessage").style.display="inline";
-        flag=false;
+        flag1=false;
+        return flag1;
     }
 })
 
@@ -44,12 +52,14 @@ city.addEventListener('blur',()=>{
     if(reg.test(inp)){
         console.log("Matched");
        num++
-       flag=true;
+       flag2=true;
+       return flag2;
     }
     else{
         console.log("Not Matched");
         document.getElementById("errormessage2").style.display="inline";
-        flag=false;
+        flag2=false;
+        return flag2;
     }
 })
 
@@ -68,12 +78,14 @@ age.addEventListener('blur',()=>{
     if(reg.test(inp)){
         console.log("Matched");
         num++;
-        flag=true;
+       flag3=true;
+       return flag3;
     }
     else{
         console.log("Not Matched");
         document.getElementById("errormessage3").style.display="inline";
-        flag=false;
+        flag3=false;
+        return flag3;
     }
 })
 
@@ -90,12 +102,14 @@ phone.addEventListener('blur',()=>{
     if(reg.test(inp)){
         console.log("Matched");
         num++;
-        flag=true;
+        flag4=true;
+        return flag4;
     }
     else{
         console.log("Not Matched");
         document.getElementById("errormessage4").style.display="inline";
-        flag=false;
+        flag4=false;
+        return flag4;
     }
 })
 
@@ -113,12 +127,14 @@ email.addEventListener('blur',()=>{
     if(reg.test(inp)){
         console.log("Matched");
        num++
-       flag=true;
+       flag5=true;
+       return flag5;
     }
     else{
         console.log("Not Matched");
         document.getElementById("errormessage5").style.display="inline";
-        flag=false;
+        flag5=false;
+        return flag5;
     }
 })
 
@@ -136,12 +152,17 @@ password.addEventListener('blur',()=>{
     if(reg.test(inp2)){
         console.log("Matched");
        num++
-       flag=true;
+       flag6=true;
+       document.getElementById("instructions").style.display="none";
+       return flag6;
+      
     }
     else{
         console.log("Not Matched");
         document.getElementById("errormessage6").style.display="inline";
-        flag=false;
+        document.getElementById("instructions").style.display="inline";
+        flag6=false;
+        return flag6;
     }
 })
 
@@ -158,23 +179,28 @@ confirmpass.addEventListener('blur',()=>{
     if(inp2==inp3){
         console.log("Matched");
         num++
-        flag=true;
-        if(num>=7){
-            button.style.display="inline";
-        }
+       flag7=true;
+       return flag7;
+        
     }
     else{
         console.log("Not Matched");
         document.getElementById("errormessage7").style.display="inline";
-        flag=false;
+        flag7=false;
+        return flag7;
     }
 })
 button.addEventListener('click',submit);
 function submit(){
+    if(flag1&&flag2&&flag3&&flag4&&flag5&&flag6&&flag7){
     alert("Form Submiited successfully")
+    }
+    else{
+        alert("Form incomplete or incorrect")
+    }
 }
+
 //console.log(nameid&&confirmpassid&&passwordid&&emailid&&phoneid&&phoneid&&ageid&&cityid)
 //if(nameid&&confirmpassid&&passwordid&&emailid&&phoneid&&phoneid&&ageid&&cityid){
 //button.style.display="inline";
-
 
